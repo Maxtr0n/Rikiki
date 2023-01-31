@@ -1,0 +1,2 @@
+# Rikiki
+ Rikiki pontszámláló alkalmazás
