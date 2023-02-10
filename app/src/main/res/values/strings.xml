@@ -3,4 +3,5 @@
     <string name="main_menu_title">Rikiki Pontszámláló</string>
     <string name="new_game">Új játék</string>
     <string name="game_settings">Játék beállítások</string>
+    <string name="start_game">Játék inditása</string>
 </resources>

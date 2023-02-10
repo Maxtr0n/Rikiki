@@ -1,5 +1,7 @@
 package hu.schutz.rikiki
 
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -16,6 +18,7 @@ import hu.schutz.rikiki.ui.MainMenuScreen
 @Composable
 fun RikikiNavHost(
     navHostController: NavHostController,
+    paddingValues: PaddingValues,
     modifier: Modifier = Modifier,
     navigationActions: RikikiNavigationActions = remember(navHostController) {
         RikikiNavigationActions(navHostController)
@@ -24,7 +27,7 @@ fun RikikiNavHost(
     NavHost(
         navController = navHostController,
         startDestination = MAIN_MENU_ROUTE,
-        modifier = modifier
+        modifier = modifier.padding(paddingValues)
     ) {
         composable(
             route = MAIN_MENU_ROUTE

@@ -1,6 +1,5 @@
 package hu.schutz.rikiki.ui
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -11,8 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import hu.schutz.rikiki.R
+import hu.schutz.rikiki.ui.theme.RikikiTheme
 
 @Composable
 fun GameSettingsScreen(
@@ -43,7 +44,17 @@ fun GameSettingsContent(
             onClick = { startGameClicked() },
             modifier = Modifier.padding(8.dp)
         ) {
-            Text(text = stringResource(R.string.new_game))
+            Text(text = stringResource(R.string.start_game))
         }
+    }
+}
+
+@Preview(showSystemUi = true, showBackground = true)
+@Composable
+fun GameSettingsPreview() {
+    RikikiTheme {
+        GameSettingsContent(
+            startGameClicked = { }
+        )
     }
 }
